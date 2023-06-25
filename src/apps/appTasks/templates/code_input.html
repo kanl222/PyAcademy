@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+    <form method="post" action="{% url 'code_execution' %}">
+  {% csrf_token %}
+  <textarea name="code" rows="10" cols="50"></textarea>
+  <button type="submit">Выполнить</button>
+</form>
+</div>
+
+{% endblock %}
